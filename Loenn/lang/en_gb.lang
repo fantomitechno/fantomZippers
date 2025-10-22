@@ -1,0 +1,11 @@
+mods.fantomZippers.name=fantom Zippers
+
+entities.fantomZippers/MouseZipper.placements.name.normal=Mouse Zipper (Normal)
+entities.fantomZippers/MouseZipper.placements.name.moon=Mouse Zipper (Moon)
+
+entities.fantomZippers/MicrophoneZipper.placements.name.normal=Microphone Zipper (Normal)
+entities.fantomZippers/MicrophoneZipper.placements.name.moon=Microphone Zipper (Moon)
+
+
+entities.fantomZippers/MouseZipper.attributes.description.theme=The visual theme of the zip mover.
+entities.fantomZippers/MicrophoneZipper.attributes.description.theme=The visual theme of the zip mover.
