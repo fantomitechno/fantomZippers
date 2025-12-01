@@ -87,7 +87,7 @@ public class fantomZippersModule : EverestModule
   {
     if (microphone != null)
     {
-      microphone.BufferDuration = TimeSpan.FromMilliseconds(10);
+      microphone.BufferDuration = TimeSpan.FromMilliseconds(100);
       microphone.BufferReady += Instance.BufferReady;
       Instance.micSamples = new byte[microphone.GetSampleSizeInBytes(microphone.BufferDuration)];
     }
