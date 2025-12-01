@@ -1,0 +1,24 @@
+name: Build using .NET Core
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+    
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v5
+
+    - name: Restore with .NET Core
+      run: dotnet restore
+
+    - name: Build using .NET Core
+      run: dotnet build CollabUtils2.sln --configuration Release --no-restore
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v5.0.0
+      with:
+        name: main
+        path: bin/Release/net452
