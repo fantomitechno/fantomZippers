@@ -15,7 +15,7 @@ jobs:
       run: dotnet restore
 
     - name: Build using .NET Core
-      run: dotnet build CollabUtils2.sln --configuration Release --no-restore
+      run: dotnet build fantomZippers.sln --configuration Release --no-restore
 
     - name: Upload artifact
       uses: actions/upload-artifact@v5.0.0
