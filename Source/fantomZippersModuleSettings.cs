@@ -10,14 +10,15 @@ public class fantomZippersModuleSettings : EverestModuleSettings
   public int Mic { get; set; } = 0;
 
   private TextMenu.Slider MicEntry;
-
+  
   // Specify how to create the menu item
   public void CreateMicEntry(TextMenu menu, bool inGame)
   {
     MicEntry = new TextMenu.Slider(
             "Device", (i) =>
             {
-              return $"{Microphone.All[i].Name}";
+              var name = Microphone.All[i].Name;
+              return name.Length > 20 ? name[..20] + "…" : name;
             }, 0, Microphone.All.Count - 1, Mic
         );
     MicEntry.Change(v =>
